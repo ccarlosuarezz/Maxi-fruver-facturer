@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="header">
+        <h1>Bienvenido</h1>
+        <img src="assets/svg/logo.svg" alt="" width="350px">
+    </div>
+    <div class="buttons">
+        <button routerLink='/create-product-window'>
+            <img src="assets/svg/add-product.svg" alt="" width="80px">
+            <p>Nuevo producto</p>
+        </button>
+        <button routerLink='/create-provider-window'>
+            <img src="assets/svg/add-provider.svg" alt="" width="80px">
+            <p>Nuevo proveedor</p>
+        </button>
+        <button routerLink='/create-customer-window'>
+            <img src="assets/svg/add-customer.svg" alt="" width="80px">
+            <p>Nuevo cliente</p>
+        </button>
+        <button routerLink='/make-sale-window'>
+            <img src="assets/svg/sale.svg" alt="" width="80px">
+            <p>Realizar venta</p>
+        </button>
+        <button (click)="notFound()">
+            <img src="assets/svg/inventory.svg" alt="" width="80px">
+            <p>Inventario</p>
+        </button>
+        <button routerLink="/create-cashier-window">
+            <img src="assets/svg/add-cashier.svg" alt="" width="80px">
+            <p>Nuevo cajero</p>
+        </button>
+        <button (click)="notFound()">
+            <img src="assets/svg/report.svg" alt="" width="80px">
+            <p>Reportes</p>
+        </button>
+        <button (click)='logout()' routerLink='/main-system-window'>
+            <img src="assets/svg/exit.svg" alt="" width="80px">
+            <p>Salir</p>
+        </button>
+    </div>
+
+</div>

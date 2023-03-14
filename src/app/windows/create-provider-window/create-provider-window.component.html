@@ -1,0 +1,60 @@
+<div class="container">
+    <h1>Crear Proveedor</h1>
+    <img src="assets/svg/logo.svg" alt="" width="350px">
+    <div class="fields">
+        <div class="tipoNombre">
+            <p>Tipo de persona</p>
+            <select [(ngModel)]="id_tipo_persona">
+                <option *ngFor="let item of personType" value="{{item.id_tipo_persona}}">{{item.nombre_tipo_persona}}</option>
+            </select>
+        </div>
+        <div>
+            <p>Tipo de documento</p>
+            <select [(ngModel)]="id_tipo_documento">
+                <option *ngFor="let item of documentType" value="{{item.id_tipo_documento}}">{{item.abreviatura_tipo_documento+': '+item.nombre_tipo_documento}}</option>
+            </select>
+        </div>
+        <div>
+            <p>identificacion</p>
+            <input type="number" [(ngModel)]="id_proveedor">
+        </div>
+        <div>
+            <p>Apellidos</p>
+            <input type="text" [(ngModel)]="apellidos_proveedor">
+        </div>
+        <div>
+            <p>Nombres</p>
+            <input type="text" [(ngModel)]="nombres_proveedor">
+        </div>
+        <div>
+            <p>fecha de nacimiento</p>
+            <input type="date" name="" id="" [(ngModel)]="fecha_nacimiento_proveedor">
+        </div>
+        <div class="address">
+            <p>Direccion de facturación</p>
+            <div>
+                <select name="type-address" id="" class="typeAddress" [(ngModel)]="tipo_direccion_proveedor">
+                    <option *ngFor="let item of addressType" value="{{item}}">{{item}}</option>
+                </select>
+                <input type="text" [(ngModel)]="numero1_direccion_proveedor">
+                <p>#</p>
+                <input type="number" [(ngModel)]="numero2_direccion_proveedor">
+                <p>-</p>
+                <input type="number" [(ngModel)]="numero3_direccion_proveedor">
+            </div>
+        </div>
+        <div>
+            <p>Correo electronico</p>
+            <input type="text" [(ngModel)]="correo_electronico_proveedor">
+        </div>
+        <div>
+            <p>telefono de contacto</p>
+            <input type="number" [(ngModel)]="numero_telefono_proveedor">
+        </div>
+    </div>
+    <div class="buttons">
+        <button (click)='createProvider()' class="btn-acept">Registrar</button>
+        <button routerLink='/main-administrator-window' type="submit" class="btn-cancel">Cancelar</button>
+    </div>
+    <app-loader *ngIf="isLoad"></app-loader>
+</div>

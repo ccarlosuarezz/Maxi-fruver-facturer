@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Buscar Producto</h1>
+    <img src="assets/svg/logo.svg" alt="" width="350px">
+    <app-loader *ngIf="isLoad"></app-loader>
+    <div class="tableContainer">
+        <table style="width:100%">
+            <thead>
+                <tr>
+                    <th>Producto</th><th>Unidad</th><th>Stock</th><th>V unitario</th><th></th>
+                </tr>
+            </thead>
+            <tr *ngFor="let product of productList">
+                <td>{{product.nombre_producto}}</td>
+                <td>{{getMeasurementUnitByID(product.id_unidad_medida)}}</td>
+                <td>{{product.cantidad_stock}}</td>
+                <td>{{product.valor_venta}}</td>
+                <td>
+                    <button (click)="addNewProduct(product)">+</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- <p>{{searchProduct}}</p> -->
+</div>

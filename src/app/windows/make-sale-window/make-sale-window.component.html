@@ -1,0 +1,70 @@
+<div class="container">
+    <h1>Realizar venta</h1>
+    <div class="headers">
+        <img src="assets/svg/logo.svg" alt="" width="300px">
+        <div class="businessData">
+            <p>MAXI FRUVER LA CANASTA</p>
+            <p>NIT 1234567890-5</p>
+            <P>Calle 24 # 12-12 Tuta - Boyaca</P>
+            <p>Cel: 3214567654</p>
+            <p>maxifruverlacanasta@gmail.com</p>
+        </div>
+        <div>
+            <div class="search">
+                <button class="buttonSearch" (click)="showSearchProductsModal()">
+                    <img src="assets/svg/search.svg" alt="" width="20px">
+                </button>
+                <input type="search" class="searchInput" value="Buscar producto" [(ngModel)]="searchProduct">
+            </div>
+            <div class="buttons">
+                <button (click)="notFound()" class="buttonPay">Pagar</button>
+                <button routerLink='/main-administrator-window' class="buttonExit">Salir</button>
+            </div>
+        </div>
+    </div>
+    <div class="customerData">
+        <div>
+            <p>Identficacion</p>
+            <input type="number" name="" id="" class="idInput">
+        </div>
+        <div>
+            <p>Cliente</p>
+            <input type="text" name="" id="" class="nameInput">
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let header of table_header">{{header}}</th>
+                </tr>
+            </thead>
+            <tbody id="table_body" class="tableBody">
+                <tr *ngFor="let product of productsForSale">
+                    <th>{{product.id_producto}}</th>
+                    <th>{{product.nombre_producto}}</th>
+                    <th>{{getMeasurementUnitByID(product.id_unidad_medida)}}</th>
+                    <th>
+                        <input type="number" name="" id="">
+                    </th>
+                    <th>{{product.valor_venta}}</th>
+                    <th>0</th>
+                    <th>
+                        <button>
+                            <img src="assets/svg/delete.svg" alt="" width="30px">
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="total">
+        <strong><p>total 0</p></strong>
+    </div>
+</div>
+<div class="modalContainer" *ngIf="isActiveModal">
+    <div class="modalWindow buttons" [ngClass]="showModal">
+        <app-generate-sale-window [searchProduct]="searchProduct" (newProductEvent)="addProductForSale($event)"></app-generate-sale-window>
+        <button (click)="closeSearchProductsModal()" class="buttonClose">Cerrar</button>
+    </div>
+</div>

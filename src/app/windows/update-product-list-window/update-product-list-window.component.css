@@ -1,0 +1,81 @@
+#main-container{
+    border-color: #263859;
+    overflow: scroll;
+    border-color: chocolate;
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    margin-left: 160px;
+}
+select{
+    height: 40px;
+    width: 150px;
+    margin: 0px;
+}
+table{
+    margin-top: 50px;
+    width: 700px;
+    text-align: left;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 8px;
+    border:solid 1px black;
+}
+hr{
+    overflow: hidden;
+    border: 1px solid white;
+}
+h1{
+    text-align: center;
+}
+thead{
+    background-color: #e5e5e5;
+}
+.total{
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 8px;
+    width: 150px;
+}
+h2{
+    float: right;
+    margin-right: 0px;
+    margin-right: 200px;
+}
+h3{
+    overflow: hidden;
+    float: left;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+
+.button-total{
+    width: 140px;
+    height: 30px;
+    color: white;
+    background-color: #6b778d;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 140px;
+    border-radius: 5px;
+}
+button{
+    border-radius: 5px;
+    color: white;
+}
+.btn-cancelar{
+    width: 100px;
+    height: 30px;
+    margin-right: 200px;
+    
+    background-color:#FF6768 ;
+}
+.btn-aceptar{
+    width: 100px;
+    height: 30px;
+    margin-right: 150px;
+    margin-left: 160px;
+    background-color:#263859 ;
+}

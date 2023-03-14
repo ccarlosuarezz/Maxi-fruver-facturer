@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Iniciar sesión</h1>
+    <img src="assets/svg/logo.svg" alt="" width="350px">
+    <div class="fields">
+        <div>
+            <img src="assets/svg/user.svg" width="65px">
+            <input type="text" [(ngModel)]="email">
+            <!-- <p>{{user}}</p> -->
+        </div>
+        <div>
+            <img src="assets/svg/key.svg" width="65px">
+            <input type="password" [(ngModel)]="password">
+        </div>
+    </div>
+    <a routerLink=''>¿Ha olvidado sus datos de acceso?</a>
+    <div class="buttons">
+        <button (click)='auth()' class="buttonLogin">Ingresar</button>
+        <button routerLink='/main-system-window' class="buttonExit">Salir</button>
+    </div>
+    <app-loader *ngIf="isLoad"></app-loader>
+</div>

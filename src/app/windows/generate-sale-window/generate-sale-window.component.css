@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableContainer {
+    max-height: 230px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+table{
+    width: 900px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 8px;
+    border:solid 1px black;
+}
+
+h1{
+    text-align: center;
+}
+
+thead{
+    background-color: #6B778D;
+}
+
+table button {
+    background-color: #ff6768;
+}
+
+table button {
+    width: 30px;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #17223B;
+    padding: 5px;
+}
+
+table button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}

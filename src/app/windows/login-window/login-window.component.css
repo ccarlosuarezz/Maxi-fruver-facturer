@@ -1,0 +1,67 @@
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.fields div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fields div input {
+    width: 180px;
+    font-size: 18px;
+}
+
+a {
+    margin: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+    margin: 20px;
+}
+
+.buttons button {
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #17223B;
+    padding: 5px;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.buttonLogin {
+    background-color: #263859;
+}
+
+.buttonExit {
+    background-color: #ff6768;
+}

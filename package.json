@@ -1,0 +1,50 @@
+{
+  "name": "maxifruver-facturer",
+  "productName": "Maxi Fruver Facturer V1",
+  "version": "0.1.0",
+  "main": "src/electron-app.js",
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build --output-path dist --base-href .",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "start": "ng build --output-path dist --base-href . && electron .",
+    "electron-start": "electron .",
+    "package-win": "electron-packager . maxi-fruver-facturer-v1 --overwrite --asar=true --platform=win32 --arch=ia32 --icon=dist/assets/ico/fruits.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.productName=\"Maxi Fruver Facturer V1\""
+  },
+  "author": "Carlos Suarez <carlos.suarez03@uptc.edu.co>",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~12.2.0",
+    "@angular/common": "~12.2.0",
+    "@angular/compiler": "~12.2.0",
+    "@angular/core": "~12.2.0",
+    "@angular/forms": "~12.2.0",
+    "@angular/platform-browser": "~12.2.0",
+    "@angular/platform-browser-dynamic": "~12.2.0",
+    "@angular/router": "~12.2.0",
+    "electron": "^14.0.1",
+    "ngx-electron": "^2.2.0",
+    "rxjs": "~6.6.0",
+    "sweetalert2": "^11.1.7",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.2.2",
+    "@angular/cli": "~12.2.2",
+    "@angular/compiler-cli": "~12.2.0",
+    "@types/jasmine": "~3.8.0",
+    "@types/node": "^12.11.1",
+    "electron-builder": "^22.11.7",
+    "electron-packager": "^15.4.0",
+    "jasmine-core": "~3.8.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.3.5"
+  }
+}

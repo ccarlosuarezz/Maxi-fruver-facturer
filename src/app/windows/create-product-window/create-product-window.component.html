@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Crear Producto</h1>
+    <img src="assets/svg/logo.svg" alt="" width="350px">
+    <div class="upFields">
+        <div>
+            <p>Nombre del producto</p>
+            <input type="text" [(ngModel)]="nombre_producto">
+        </div>
+        <div>
+            <p>Categoria producto</p>
+            <select name="select" [(ngModel)]="id_categoria">
+                <option *ngFor="let item of productCategories" value="{{item.id_categoria}}">{{item.nombre_categoria}}</option>
+            </select>
+        </div>
+        <div>
+            <p>Unidad de medida</p>
+            <select name="select" [(ngModel)]="id_unidad_medida">
+                <option *ngFor="let item of measurementUnits" value="{{item.id_unidad_medida}}">{{item.nombre_unidad_medida}}</option>
+            </select>
+            <a (click)="notFound()" class="input">Agregar nueva unidad de medida</a>
+        </div>
+        <div>
+            <p>Codigo del proveedor</p>
+            <select name="select" id="caja">
+                <option *ngFor="let item of providers" value="{{item.id_proveedor}}">{{item.nombres_proveedor+' '+item.apellidos_proveedor}}</option>
+            </select>
+            <a (click)="notFound()" class="last-text">Agregar nueva proveedor</a>
+        </div>
+    </div>
+    <div class="downFields">
+        <div>
+            <p>Valor de compra</p>
+            <input type="number" id="last-row">
+        </div>
+        <div>
+            <p>Valor de venta</p>
+            <input type="number" id="last-row">
+        </div>
+        <div>
+            <p>Cantidad de stock</p>
+            <input type="number" id="last-row">
+        </div>
+    </div>
+    <div class="buttons">
+        <button (click)='createProduct()' class="buttonAccept">Registrar</button>
+        <button routerLink='/main-administrator-window' type="submit" class="buttonCancel">Cancelar</button>
+    </div>
+    <app-loader *ngIf="isLoad"></app-loader>
+</div>

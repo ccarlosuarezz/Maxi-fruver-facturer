@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>Crear cliente</h1>
+    <img src="assets/svg/logo.svg" alt="" width="350px">
+    <div class="fields">
+        <div class="personType">
+            <p>Tipo de persona</p>
+            <select name="person-type" id="" class="personTypeField" [(ngModel)]="id_tipo_persona">
+                <option *ngFor="let item of personTypes" value="{{item.id_tipo_persona}}">{{item.nombre_tipo_persona}}</option>
+            </select>
+        </div>
+        <div class="documentType">
+            <p>Tipo de documento</p>
+            <select name="document-type" id="" class="documentTypeField" [(ngModel)]="id_tipo_documento">
+                <option *ngFor="let item of documentTypes" value="{{item.id_tipo_documento}}">{{item.abreviatura_tipo_documento+': '+item.nombre_tipo_documento}}</option>
+            </select>
+        </div>
+        <div class="identification">
+            <p>Identificación</p>
+            <input type="number" [(ngModel)]="id_cliente">
+        </div>
+        <div class="lastName">
+            <p>Apellidos</p>
+            <input type="text" [(ngModel)]="apellidos_cliente">
+        </div>
+        <div class="name">
+            <p>Nombres</p>
+            <input type="text" [(ngModel)]="nombres_cliente">
+        </div>
+        <div class="birthdate">
+            <p>Fecha de nacimiento</p>
+            <input type="date" [(ngModel)]="fecha_nacimiento_cliente">
+        </div>
+        <div class="address">
+            <p>Direccion de facturación</p>
+            <div>
+                <select name="type-address" id="" class="typeAddress" [(ngModel)]="tipo_direccion_cliente">
+                    <option *ngFor="let item of addressTypes" value="{{item}}">{{item}}</option>
+                </select>
+                <input type="text" [(ngModel)]="numero1_direccion_cliente">
+                <p>#</p>
+                <input type="number" [(ngModel)]="numero2_direccion_cliente">
+                <input type="number" [(ngModel)]="numero3_direccion_cliente">
+            </div>
+        </div>
+        <div class="email">
+            <p>Correo electronico</p>
+            <input type="email" [(ngModel)]="correo_electronico_cliente">
+        </div>
+        <div class="telephone">
+            <p>Teléfono de contacto</p>
+            <input type="number" [(ngModel)]="numero_telefono_cliente">
+        </div>
+    </div>
+    <div class="offers">
+        <input type="checkbox" name="" id="allow" [(ngModel)]="recibir_ofertas">
+        <label for="allow">¿Desea recibir ofertas y promociones exclusivas?</label>
+    </div>
+    <div class="buttons">
+        <button (click)='createProvider()' class="buttonRegister">Registrar</button>
+        <button routerLink="/main-administrator-window" class="buttonCancel">Cancelar</button>
+    </div>
+    <app-loader *ngIf="isLoad"></app-loader>
+</div>
